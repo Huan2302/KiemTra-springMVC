@@ -19,8 +19,8 @@
 
     <link rel="stylesheet" href="fontawesome/css/all.min.css"> <!-- https://fontawesome.com/ -->
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet"> <!-- https://fonts.google.com/ -->
-    <link href="<%=request.getContextPath()%>/teamplate/css/bootstrap.min.css" rel="stylesheet">
-    <link href="<%=request.getContextPath()%>/teamplate/css/templatemo-xtra-blog.css" rel="stylesheet">
+    <link href="${contextPath}/css/bootstrap.min.css" rel="stylesheet">
+    <link href="${contextPath}/css/templatemo-xtra-blog.css" rel="stylesheet">
     <!--
 
     TemplateMo 553 Xtra Blog
@@ -39,7 +39,7 @@
         <tiles:insertAttribute name="footer"></tiles:insertAttribute>
     </main>
 </div>
-<script src="<%=request.getContextPath()%>/teamplate/js/jquery.min.js"></script>
-<script src="<%=request.getContextPath()%>/teamplate/js/templatemo-script.js"></script>
+<script src="${contextPath}/js/jquery.min.js"></script>
+<script src="${contextPath}/js/templatemo-script.js"></script>
 </body>
 </html>

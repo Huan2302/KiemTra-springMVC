@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: admin
@@ -39,22 +40,31 @@
       <polygon style="stroke: rgb(0,0,0); stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1;" vector-effect="non-scaling-stroke" points="-50,-50 -50,50 50,50 50,-50 "></polygon>
     </g>
   </svg>
-  <div class="email">
-    <label for="email">Email Address</label>
-    <div class="sec-2">
-      <ion-icon name="mail-outline"></ion-icon>
-      <input type="email" name="email" placeholder="Username@gmail.com"/>
+  <%
+    if (request.getAttribute("msg")!=null){
+  %>
+      <c:out value="${msg}"/>
+  <%
+    }
+  %>
+  <form action="<%=request.getContextPath()%>/login" method="post">
+    <div class="email">
+      <label for="email">Email Address</label>
+      <div class="sec-2">
+        <ion-icon name="mail-outline"></ion-icon>
+        <input type="text" name="name" placeholder="Username@gmail.com"/>
+      </div>
     </div>
-  </div>
-  <div class="password">
-    <label for="password">Password</label>
-    <div class="sec-2">
-      <ion-icon name="lock-closed-outline"></ion-icon>
-      <input class="pas" type="password" name="password" placeholder="············"/>
-      <ion-icon class="show-hide" name="eye-outline"></ion-icon>
+    <div class="password">
+      <label for="password">Password</label>
+      <div class="sec-2">
+        <ion-icon name="lock-closed-outline"></ion-icon>
+        <input class="pas" type="password" name="password" placeholder="············"/>
+        <ion-icon class="show-hide" name="eye-outline"></ion-icon>
+      </div>
     </div>
-  </div>
-  <button class="login">Login </button>
+    <input type="submit">
+  </form>
   <div class="footer"><span>Signup</span><span>Forgot Password?</span></div>
 </div>
 <!-- partial -->
